@@ -1,0 +1,2 @@
+Proyecto de IA
+aplicando algoritmos geneticos
