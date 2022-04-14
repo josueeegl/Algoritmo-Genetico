@@ -2,18 +2,19 @@ import numpy as np
 import random
 
 class DNA():
-    def __init__(self, target, mutacion_rate, nIndividuos, nSelection, nGeneraciones, imprimir = True):
+    def __init__(self, target, porcentaje, mutacion_rate, nIndividuos, nSelection, nGeneraciones, imprimir = True):
         self.target = target
         self.mutacion_rate = mutacion_rate
         self.nIndividuos = nIndividuos
         self.nSelection = nSelection
         self.nGeneraciones = nGeneraciones
         self.imprimir = imprimir
+        self.porcentaje = porcentaje
     
 
     """ esta funcion es para crear un individuo """
     def crear_individuos(self, min = 0, max = 9): 
-        individuos = [np.random.randint(min, max) for i in range(len(self.target))]
+        individuos = [np.random.randint(min, max) for i in range(4)]
         return individuos
 
 
@@ -26,7 +27,7 @@ class DNA():
     def fitnessF(self, individuo):
         fitness = 0
         for i in range(len(individuo)):
-            if individuo[i] == self.target[i]:
+            if individuo[i] == self.target:
                 fitness += 1    
         return fitness
 
@@ -38,21 +39,19 @@ class DNA():
         return selec
 
     def reproduccion_nwGene(self, poblacion, seleccion):
-        punto = 0
         padre = []
 
         for i in range(len(poblacion)):
-            punto = np.random.randint(1, len(self.target) - 1)
             padre = random.sample(seleccion, 2)
 
-            poblacion[i][:punto] = padre[0][:punto]
-            poblacion[i][punto:] = padre[1][punto:]
+            poblacion[i][:2] = padre[0][:2]
+            poblacion[i][2:] = padre[1][2:]
         return  poblacion
 
     def mutacion(self, poblacion):
         for i in range(len(poblacion)):
             if random.random() <= self.mutacion_rate:
-                punto = random.randint(1, len(self.target) - 1)
+                punto = random.randint(1, 3)
                 nuevo_valor = np.random.randint(0 , 9)
                 while nuevo_valor == poblacion[i][punto]:
                     nuevo_valor = np.random.randint(0, 9)
@@ -63,11 +62,11 @@ class DNA():
     def run_AlgoGen(self):
         poblacion = self.crear_poblacion()
         for i in range(self.nGeneraciones):
-
             if self.imprimir:
                 print('_______________')
                 print('Generacion: ', i)
                 print('Poblacion: ', poblacion)
+                
             selec = self.seleccion(poblacion)
             poblacion = self.reproduccion_nwGene(poblacion, selec)
             poblacion = self.mutacion(poblacion)
