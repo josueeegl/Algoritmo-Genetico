@@ -1,0 +1,190 @@
+body{
+    background-color: burlywood;
+    border:0;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 60px,1fr,1fr,1fr,1fr, 1fr;
+    grid-template-areas:
+    "atitulo  atitulo"
+    "avariables ageneraciones"
+    "apoblacion_inicial ageneraciones"
+    "apoblacion_inicial ageneraciones"
+    "ageneracion_final ageneraciones"
+    "ageneracion_final ageneraciones";
+    gap:0.25em;
+}
+.titulo{
+    background-color: burlywood;
+    background-image: url("https://thumbs.dreamstime.com/b/concepto-de-la-inteligencia-artificial-fondo-tecnolog%C3%ADa-120316809.jpg");
+    background-repeat: no-repeat;
+    background-size: 85em;
+    background-position: center;
+    grid-area: atitulo;
+    text-align: center;
+    h1{
+        color: white;
+        font-size: 3em;
+    }
+    img{
+        vertical-align: text-top;
+        width: 150px;
+    }
+}
+.variables{
+    background-color: white;
+    display: inline;
+    text-align: center;
+    grid-area: avariables;
+    gap: 1em;
+    .formulario{
+        background-color: cadetblue;
+        margin: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(auto-fill,minmax(50px,3fr));
+        display:grid;
+        .variable1{
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }  
+        .variable2{
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .variable3{
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .variable4{
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dato1{
+            text-align: center;
+            margin-top: 10px;
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .dato2{
+            text-align: center;
+            margin-top: 10px;
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .dato3{
+            text-align: center;
+            margin-top: 10px;
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .dato4{
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 50px;
+        }
+        .btiniciar{
+            font-weight: bold;
+            font-size: 15px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 30px;   
+        }      
+    }
+}
+.poblacion_inicial{
+    background-color: white;
+    display: grid;
+    grid-area: apoblacion_inicial;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: "atitulop atitulop"
+    "apoblacion1 apoblacion1"
+    "apoblacion1 apoblacion1"
+    "apoblacion1 apoblacion1";
+    .titulop{
+        margin: 10px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 18px;
+        display: inline;
+        grid-area: atitulop;
+        background-color: cadetblue;
+    }
+    .poblacion1{
+        margin: 10px;
+        grid-area: apoblacion1;
+        background-color: cadetblue;
+    }
+}
+.generacion_final{
+    background-color: white;
+    display: grid;
+    grid-area: ageneracion_final;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "atitulof atitulof"
+    "apoblacionfinal apoblacionfinal"
+    "apoblacionfinal apoblacionfinal"
+    "apoblacionfinal apoblacionfinal";
+    .titulof{
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        background-color: cadetblue;
+        margin: 10px;
+        grid-area: atitulof;
+        display: inline;
+    }
+    .poblacionfinal{
+        grid-area: apoblacionfinal;
+        display: inline;
+        margin:10px;
+        background-color: cadetblue;
+    }
+}
+.generaciones{
+    background-color: white;
+    display: grid;
+    grid-area: ageneraciones;
+    gap: 0.5;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9,1fr);
+    grid-template-areas: 
+    "atitulog"
+    "aiteraciones"
+    "aiteraciones"
+    "aiteraciones"
+    "aiteraciones"
+    "aiteraciones"
+    "aiteraciones"
+    "aiteraciones"
+    "aiteraciones";
+
+    .titulog{
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        background-color: brown;
+        display: inline;
+        margin: 10px;
+        grid-area: atitulog;
+    }
+    .iteraciones{
+        color: white;
+        background-color: brown;
+        display: inline;
+        margin: 10px;
+        grid-area: aiteraciones;
+    }
+}

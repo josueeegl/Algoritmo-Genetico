@@ -1,0 +1,4 @@
+1 - la representacion sera no binaria
+2 - el valor de la funcion fitness sera para cada individuo sera verificar si es => los parametros, dependiendo de esto se sumara
+3 - finalizar sera cumplir el 85% de convergencia
+4 - la seleccion de padres se hara por medio de torneo donde se seleccionan la mitad de la poblacion mayor valor fitness

@@ -1,0 +1,226 @@
+body {
+  font-family: Tahoma;
+  background-color: rgb(32, 32, 31);
+  border: 0;
+}
+
+.titulo {
+  border-radius: 4px;
+  background-image: url("https://blog.enzymeadvisinggroup.com/hubfs/algoritmos-geneticos-y-sus-aplicaciones-1.jpg");
+  background-size: 85em;
+  background-position: center;
+  text-align: center;
+}
+
+.title {
+  font-family: Verdana, Geneva, Tahoma;
+  color: white;
+  margin-top: 0px;
+  font-size: 3em;
+}
+
+.logo {
+  position: relative;
+  bottom: 15px;
+  vertical-align: text-top;
+  width: 100px;
+  opacity: 0.5;
+}
+.poblaciones{
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.variables {
+  background-color: rgb(32, 32, 31);
+  display: inline;
+  text-align: center;
+}
+
+.variables .formulario {
+  border-radius: 4px;
+  background-color: rgb(255, 255, 245);
+  margin: 10px;
+  display: grid;
+}
+
+.variables .formulario .variable2 {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin: 15px;
+}
+
+.variables .formulario .variable3 {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin: 15px;
+}
+
+.variables .formulario .variable4 {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin: 15px;
+}
+
+.variables .formulario .dato2 {
+  font-size: 16px;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  height: 20px;
+  text-align: center;
+  margin-top: 5px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.variables .formulario .dato3 {
+  font-size: 16px;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  height: 20px;
+  text-align: center;
+  margin-top: 5px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.variables .formulario .dato4 {
+  font-size: 16px;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  height: 20px;
+  text-align: center;
+  margin-top: 5px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.variables .formulario .btiniciar {
+  justify-self: center;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.poblacion_inicial {
+  border-radius: 4px;
+  padding: 10px;
+  display: inline;
+  margin: 10px;
+  background-color: rgb(255, 255, 245);
+}
+.poblacion1 {
+  background-color: rgb(32, 32, 31);
+  display: none;
+
+}
+
+.generacion_final {
+  background-color: rgb(32, 32, 31);
+  display: none;
+
+}
+
+
+.generacion_final .poblacionfinal {
+  border-radius: 4px;
+  padding: 10px;
+  display: inline;
+  margin: 10px;
+  background-color: rgb(255, 255, 245);
+}
+
+.generaciones {
+  float: right;
+  width: 50%;
+  margin: auto;
+  background-color: rgb(32, 32, 31);
+  display: none;
+
+}
+
+.titulog {
+  height: 20px;
+  font-size: 26px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(32, 32, 31);
+  display: inline;
+  margin: 10px;
+}
+
+.generaciones .iteraciones {
+  padding: 10px;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 245);
+  display: inline;
+  margin: 10px;
+}
+/*# sourceMappingURL=GUI.css.map */
+
+.contenido {
+  display: grid;
+  grid-template-columns: repeat(12, 3rem);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.contenido img {
+  margin: 5px;
+  width: 30px;
+  height: 50px;
+}
+
+.contenido2 {
+  display: grid;
+  grid-template-columns: repeat(18, 2rem);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.contenido2 img {
+  margin: 2px;
+  width: 20px;
+  height: 40px;
+}
+
+@media screen and (max-width: 1200px) 
+{
+    .contenido{
+        grid-template-columns: repeat(5, 1fr);
+        padding: 2rem;
+    }
+    .contenido2{
+      grid-template-columns: repeat(7, 1fr);
+      padding: 2rem;
+  }
+    
+}
+
+@media screen and (max-width: 650px) 
+{
+    .contenido{
+        grid-template-columns: 1fr;
+    }
+    .contenido2{
+      grid-template-columns: 1fr;
+  }
+}
