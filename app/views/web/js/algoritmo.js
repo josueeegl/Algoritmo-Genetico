@@ -4,7 +4,7 @@ document.getElementById("btnIniciar").addEventListener("click", () => {
   rang = document.getElementById("rango").value;
 
   fetch(
-    "http://localhost:5000/datos2?" +
+    "/datos2?" +
       new URLSearchParams({
         convergencia: conver === "" ? 0.9 : conver,
         target: 5,
