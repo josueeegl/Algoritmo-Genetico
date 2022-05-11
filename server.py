@@ -5,7 +5,6 @@ from config import Config
 
 
 app = Flask(__name__, static_folder=Config.STATIC_FOLDER, template_folder=Config.TEMPLATE_FOLDER)
-app.config.from_object(Config)
 @app.route('/')
 def inicio():
     return render_template("index.html")
@@ -34,4 +33,4 @@ def getDParams():
     return al
 
 if __name__ == "__main__":
-    app.run()  # No añadir parámetros, modificar directamente en Config
+    app.run(debug=True ,port=5000,use_reloader=False)  # No añadir parámetros, modificar directamente en Config
