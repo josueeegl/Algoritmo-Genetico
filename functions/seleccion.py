@@ -15,7 +15,6 @@ def sHijos(p1,  md=object):
     nuevaGen=[]
     hijos = deepcopy(p1)
     mutado = deepcopy(p1)
-    print('-------------\n\n')
 
     if len(p1) % 2 == 1:
         for i in range(int(md.rango / 2)):

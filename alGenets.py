@@ -33,15 +33,11 @@ def algoritmo(convergencia, target, nVacunas, nContagios, nIndividuos, rango, ma
 
     while convergencia < md.convergencia:
         
-        print('generacion: ', i)
         x = fit.fitnessF(mutado, md)
         p = sele.sPadres(x[0])
         nueva_gen = (sele.sHijos(p, md))
         mutado = mut.mutar(nueva_gen)
         convergencia = x[1] / total
-        print('valor de finalizacion: ', total, x[1])
-        print('valor de convergencia de generacion: ',
-              i, ' = ', (convergencia*100))
         listageneraciones.append(mutado)
         i += 1
     return [i-1, (convergencia*100), listageneraciones, mutado]

@@ -3,8 +3,7 @@ document.getElementById("btnIniciar").addEventListener("click", () => {
   indi = document.getElementById("individuos").value;
   rang = document.getElementById("rango").value;
 
-  fetch(
-    "/datos2?" +
+  fetch("/datos2?" +
       new URLSearchParams({
         convergencia: conver === "" ? 0.9 : conver,
         target: 5,

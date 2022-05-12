@@ -4,9 +4,6 @@ import functions.imprimir as imp
 def fitnessF(poblacion, md=object):
     fitness = 0
     suma = 0
-    print('Población inicial: \n')
-    imp.imprimir(poblacion)
-    print('\nIndividuos son su valor fitness: \n')
 
     for i in range(len(poblacion)): #recorremos la poblacion
         for j in range(len(poblacion[i])): #recorremos el individuo
@@ -19,11 +16,8 @@ def fitnessF(poblacion, md=object):
                 fitness += md.nContagios
 
         poblacion[i].insert(0,fitness) #se agrega el fitness al final del individuo
-        print(poblacion[i], ' = ' + str(fitness))
         suma += fitness
         fitness = 0
-    print('\n------------------------\n')
-    print('Suma de valores fitness de la poblacion: ',suma)
     pobOrdenada = ordenar(poblacion)
     return [pobOrdenada, suma]
 
