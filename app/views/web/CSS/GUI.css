@@ -12,6 +12,27 @@ body {
   text-align: center;
 }
 
+.loading{
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  align-items: center;
+  display: none;
+  justify-content: center;
+  height: 100%;
+  z-index: 9999;
+}
+
+.loading img{
+  width: 550px;
+  height: 400px;
+  object-fit: fill;
+  border-radius: 50px;
+
+}
+.loading .containerGIF{
+  border-radius: 4px;
+}
 .title {
   font-family: Verdana, Geneva, Tahoma;
   color: white;

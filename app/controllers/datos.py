@@ -6,7 +6,6 @@ import json
 def respuesta():
     valor = al.algoritmo(convergencia=0.90, target=5, nVacunas=2,
                          nContagios=1, nIndividuos=8, rango=8, max=6, min=0)
-
     lis = []
     lista3 = {}
     i = 0
@@ -19,7 +18,6 @@ def respuesta():
         lista3['generacion' + str(i)] = lis
         i += 1
         lis = []
-
     return jsonify({'generaciones': lista3, 'datosfinales': datos})
 
 
