@@ -21,11 +21,14 @@ document.getElementById("btnIniciar").addEventListener("click", () => {
   )
     .then((res) => res.json())
     .then((data) => {
+      console.log("data recibida");
       document.getElementById("generaciones").style.display = "grid";
       document.getElementById("poblacion1").style.display = "grid";
       document.getElementById("pFinal").style.display = "grid";
       generaciones(data);
+
       pob_inicial(data);
+
       pob_final(data);
     })
     .finally(() => {

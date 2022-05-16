@@ -4,7 +4,10 @@ from app.controllers import respuesta, respuesta2
 from config import Config
 
 
-app = Flask(__name__, static_folder=Config.STATIC_FOLDER, template_folder=Config.TEMPLATE_FOLDER)
+app = Flask(__name__, static_folder=Config.STATIC_FOLDER,
+            template_folder=Config.TEMPLATE_FOLDER)
+
+
 @app.route('/')
 def inicio():
     return render_template("index.html")
@@ -32,5 +35,7 @@ def getDParams():
                     nContagios, nIndividuos, rango, max, min)
     return al
 
+
 if __name__ == "__main__":
-    app.run(debug=True ,port=5000,use_reloader=False)  # No añadir parámetros, modificar directamente en Config
+    # No añadir parámetros, modificar directamente en Config
+    app.run(debug=True, port=5000, use_reloader=False)

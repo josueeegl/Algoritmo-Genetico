@@ -32,7 +32,7 @@ def algoritmo(convergencia, target, nVacunas, nContagios, nIndividuos, rango, ma
     listageneraciones.append(pob_inicial)
 
     while convergencia < md.convergencia:
-        
+
         x = fit.fitnessF(mutado, md)
         p = sele.sPadres(x[0])
         nueva_gen = (sele.sHijos(p, md))
